@@ -1,5 +1,5 @@
 llave = 22
-with open("image-removebg-preview.png", mode="rb") as image:
+with open("original_image.png", mode="rb") as image:
     image_content = image.read()
     image_content = bytearray(image_content)
     for index, value in enumerate(image_content):

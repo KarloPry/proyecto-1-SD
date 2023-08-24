@@ -29,8 +29,6 @@ def main():
         f.close()
         response = ":)"
         rf.close()
-        client_socket.send(response.encode('utf-8'))
         print("Terminado")
         client_socket.close()
-
 main()

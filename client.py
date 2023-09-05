@@ -18,4 +18,10 @@ with open(encrypted_image_path, "rb") as encrypted_image:
             retrieved_image.write(data)
             data = client_socket.recv(1024)
     client_socket.close()
+with open(original_image, "rb") as original_image_file:
+    with open("retrieved_image.png", "rb") as retrieved_image_file:
+        if original_image_file.read() == retrieved_image_file.read():
+            print("Se regresó la misma imagen")
+        else:
+            print("La imagen no es la misma")
 
